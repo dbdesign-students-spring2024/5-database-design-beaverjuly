@@ -36,7 +36,7 @@
     - `assignment_topic`
     - `relevant_reading`
     - `due_date`
-    - `professor_id`
+    - `professor_id` (Foreign Key)
 
 ## Student
 - **Entity**: Students
@@ -88,14 +88,9 @@
 - A one-to-many relationship where each professor give multiple unique assignments; and each assignment belongs only to the Professor who published it. 
 - `professor_id` is a direct foreign key in the Assignments table.
 
-
-
 # Normal Form Compliance Analysis
 
-
-## Courses Table Analysis
-
-### Courses Table:
+## Courses Table
 | course_id | course_name              |
 |-----------|--------------------------|
 | 101       | Database Systems         |
@@ -133,9 +128,7 @@
 - **Conclusion**: Complies with 2NF, 3NF, and 4NF.
 
 
-## Sections Table Analysis:
-
-### Table Structure:
+## Sections Table
 | section_id | course_id | professor_id | classroom_id | due_date  |
 |------------|-----------|--------------|--------------|-----------|
 | 1          | 101       | 1            | 1            | 23.02.21  |
