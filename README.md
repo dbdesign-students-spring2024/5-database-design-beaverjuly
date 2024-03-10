@@ -135,8 +135,6 @@
 | 1          | 101       | 1            | 1            | 23.02.21  |
 | 2          | 102       | 2            | 2            | 18.11.21  |
 
-### Normal Form Analysis:
-
 - **2NF**: 
   - Each non-key attribute (`course_id`, `professor_id`, `classroom_id`, `due_date`) is fully functionally dependent on the primary key (`section_id`), not on just a part of it.
 
@@ -185,7 +183,7 @@
 - **Conclusion**: Complies with 2NF, 3NF, and 4NF.
 
 
-# Addtional Junction Tables for Many-to-Many Relationships
+# Additional Junction Tables for Many-to-Many Relationships
 
 ## 1. To represent relationship between Assignments & Sections Tables:
 ### AssignmentSection 
