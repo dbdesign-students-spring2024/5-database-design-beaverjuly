@@ -1,5 +1,6 @@
 # Data Normalization and Entity-Relationship Diagramming
 
+![](./images/University%20ERD.drawio.svg)
 
 # Entities and Attributes:
 
