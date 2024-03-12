@@ -1,8 +1,32 @@
 # Data Normalization and Entity-Relationship Diagramming
 
+
+## Normal Form Analysis of Original Table
+
+
+| assignment_id | student_id | due_date | professor | assignment_topic | classroom | grade | relevant_reading | professor_email |
+|---------------|------------|----------|-----------|------------------|-----------|-------|------------------|-----------------|
+| 1             | 1          | 23.02.21 | Melvin    | Data normalization | WWH 101  | 80    | Deumlich Chapter 3 | l.melvin@foo.edu |
+| 2             | 7          | 18.11.21 | Logston   | Single table queries | 60FA 314 | 25   | Dümmlers Chapter 11 | e.logston@foo.edu |
+| ...           | ...        | ...      | ...       | ...              | ...       | ...   | ...              | ...              |
+
+### 2NF (Second Normal Form) Compliance:
+- The table is NOT in 2NF because there are partial dependencies on a subset of the primary key. 
+- Assuming the composite key is (assignment_id, student_id), attributes like `professor`, `classroom`, and `assignment_topic` are only dependent on `assignment_id`, not on the entire composite key.
+
+### 3NF (Third Normal Form) Compliance:
+- The table is NOT in 3NF. There are transitive dependencies present
+- e.g., `professor` -> `professor_email`. The email address of the professor is dependent on the professor, not directly on the primary key (assignment_id, student_id).
+
+### 4NF (Fourth Normal Form) Compliance:
+- The table is NOT in 4NF as it fails to resolve multi-valued dependencies. 
+- For example, an assignment can have multiple students, and a student can have multiple grades, which should not be represented in a single table to comply with 4NF.
+
+
+# Entity Relationship Diagram
 ![](./images/University%20ERD.drawio.svg)
 
-# Entities and Attributes:
+# Entities and Attributes
 
 ## Courses
 - **Entity**: Courses
